@@ -79,7 +79,7 @@ namespace Firebase.Xamarin.Token
 
 		private string computeToken(Dictionary<string, object> claims)
 		{
-			return JWT.JsonWebToken.Encode(claims, this._firebaseSecret, JWT.JwtHashAlgorithm.HS256);
+			return JsonWebToken.Encode(claims, this._firebaseSecret, JwtHashAlgorithm.HS256);
 		}
 
 		private static long secondsSinceEpoch(DateTime dt)
